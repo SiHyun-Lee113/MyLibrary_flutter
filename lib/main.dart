@@ -5,6 +5,8 @@ import 'package:library_flutter/myLibrary/TestWebView.dart';
 import 'package:library_flutter/myLibrary/TextField/TextCollection.dart';
 import 'package:library_flutter/myLibrary/UiCollection/ImageSlider.dart';
 
+import 'myLibrary/RestAPI/getRequest.dart';
+
 void main() => runApp(Main());
 
 class Main extends StatelessWidget {
@@ -67,7 +69,7 @@ class _LibraryCollectionPageState extends State<_LibraryCollectionPage> {
                         context,
                         MaterialPageRoute(builder: (context) => WebViewApp()));
                   },
-                  child: Text('WebView(Youtube.com)')
+                  child: Text('WebView')
               ),
               ElevatedButton(
                   onPressed: () {
@@ -85,9 +87,14 @@ class _LibraryCollectionPageState extends State<_LibraryCollectionPage> {
               ),
               ElevatedButton(
                   onPressed: () {
-
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                          GetRequestTest()
+                        )
+                    );
                   },
-                  child: Text('')
+                  child: Text('RestAPI Test')
               ),
             ],
           )
