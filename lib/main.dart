@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:library_flutter/myLibrary/Button/ButtonCollection.dart';
-import 'package:library_flutter/myLibrary/Dialog/DialogCollection.dart';
-import 'package:library_flutter/myLibrary/TestWebView.dart';
-import 'package:library_flutter/myLibrary/TextField/TextCollection.dart';
-import 'package:library_flutter/myLibrary/UiCollection/ImageSlider.dart';
+import 'package:library_flutter/myLibrary/UI/Button/ButtonCollection.dart';
+import 'package:library_flutter/myLibrary/UI/Dialog/DialogCollection.dart';
+import 'package:library_flutter/myLibrary/UI/TestWebView.dart';
+import 'package:library_flutter/myLibrary/UI/TextField/TextCollection.dart';
+import 'package:library_flutter/myLibrary/UI/Useful_UI//ImageSlider.dart';
+import 'package:library_flutter/myLibrary/UI/Useful_UI/ListViewPage.dart';
+import 'package:library_flutter/myLibrary/UI/Useful_UI/Useful_UI_Collection.dart';
 
-import 'myLibrary/RestAPI/getRequest.dart';
+import 'myLibrary/RestAPI/Get.dart';
+import 'myLibrary/RestAPI/Post.dart';
 
 void main() => runApp(Main());
 
@@ -71,31 +74,46 @@ class _LibraryCollectionPageState extends State<_LibraryCollectionPage> {
                   },
                   child: Text('WebView')
               ),
+
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) =>
-                            MyImageSlider(
-                              imageList: [
-                                "assets/images/test1.png",
-                                "assets/images/test2.png",
-                                "assets/images/test3.png",],
-                            )));
-                  },
-                  child: Text('슬라이드 이미지')
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) =>
-                          GetRequestTest()
+                            UI_Collection()
                         )
                     );
                   },
-                  child: Text('RestAPI Test')
+                  child: Text('Ui Collection')
               ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                            GetRequestTest()
+                        )
+                    );
+                  },
+                  child: Text('RestAPI(get) Test')
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>
+                            PostRequestTest()
+                        )
+                    );
+                  },
+                  child: Text('RestAPI(post) Test')
+              ),
+
             ],
           )
         ],

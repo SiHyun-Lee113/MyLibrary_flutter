@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:library_flutter/myLibrary/TextField//TextFieldValidation.dart';
-import 'package:library_flutter/myLibrary/TextField/TextformField.dart';
+import 'package:library_flutter/myLibrary/UI/TextField//TextFieldValidation.dart';
+import 'package:library_flutter/myLibrary/UI/TextField/TextformField.dart';
 
 import 'TextFieldValidationPW.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:library_flutter/myLibrary/Button/MyCheckbox.dart';
-import 'package:library_flutter/myLibrary/Button/MyDropdownButton.dart';
-import 'package:library_flutter/myLibrary/Button/MyIconButton.dart';
-import 'package:library_flutter/myLibrary/Button/MyPopupMenuButton.dart';
+import 'package:library_flutter/myLibrary/UI/Button/MyCheckbox.dart';
+import 'package:library_flutter/myLibrary/UI/Button/MyDropdownButton.dart';
+import 'package:library_flutter/myLibrary/UI/Button/MyIconButton.dart';
+import 'package:library_flutter/myLibrary/UI/Button/MyPopupMenuButton.dart';
 
 class ButtonCollection extends StatelessWidget {
   @override

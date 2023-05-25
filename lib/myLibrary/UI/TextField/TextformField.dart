@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_flutter/myLibrary/TextField/validate.dart';
+import 'package:library_flutter/myLibrary/UI/TextField/validate.dart';
 
 class SignUp extends StatefulWidget {
 
