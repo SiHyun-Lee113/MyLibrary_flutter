@@ -1,5 +1,5 @@
 import 'package:http/http.dart' as http;
-
+//Request Parameter가 존재할 때
 Future<String> get_param(String URL, Map<String, dynamic> params) async {
   var url = Uri.parse(URL).replace(queryParameters: params);
   var response = await http.get(url);
@@ -12,6 +12,7 @@ Future<String> get_param(String URL, Map<String, dynamic> params) async {
   }
 }
 
+//아무런 파라미터가 없을 때
 Future<String> get(String URL) async {
   var url = Uri.parse(URL);
   var response = await http.get(url);
@@ -24,6 +25,7 @@ Future<String> get(String URL) async {
   }
 }
 
+//Path Variable이 존재할 때
 Future<String> get_pathVariable(String URL, List<String> variables) async {
   for (String s in variables) {
     URL += '/' + s;

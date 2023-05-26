@@ -7,7 +7,6 @@ class TestDto extends Dto{
 
   TestDto({required this.name, required this.age});
 
-
   @override
   String toString() {
     return 'TestDto{name: $name, age: $age}';

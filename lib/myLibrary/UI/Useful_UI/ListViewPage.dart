@@ -15,6 +15,30 @@ class _ListViewPageState extends State<ListViewPage> {
       ),
       body: ListView(
         children: <Widget>[
+          ListTile(
+            title: Text('ListView'),
+            subtitle: Text('Using ListTile'),
+            trailing: Icon(Icons.more_vert),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: FlutterLogo(
+              size: 50.0,
+            ),
+            title: Text('Flutter'),
+            trailing: Icon(Icons.autorenew),
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.account_box,
+              size: 50.0,
+            ),
+            title: Text('Contacts'),
+            subtitle: Text('Add Phone Number'),
+            trailing: Icon(Icons.add),
+            onTap: () {},
+          ),
           //TODO 리스트뷰에 들어갈 위젯을 커스텀하자 ex) android-recyclerView
           Container(
             height: 500,
