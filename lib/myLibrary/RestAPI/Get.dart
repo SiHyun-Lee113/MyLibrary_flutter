@@ -79,7 +79,7 @@ class GetRequestTestState extends State<StatefulWidget> {
                   });
                 },
                 child: Text('Path Variable get')),
-            Text("DTO를 받아보자 : $get_dto"),
+            Text("DTO를 받아d보자 : $get_dto"),
             ElevatedButton(
                 onPressed: () {
                   Map<String, String> params = {'id': 'id', 'pw': 'password'};
