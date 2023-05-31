@@ -57,7 +57,7 @@ class GetRequestTestState extends State<StatefulWidget> {
                     });
                   }).catchError((error) {
                     setState(() {
-                      apiResponse = 'Error : $error';
+                      get_param_response = 'Error : $error';
                     });
                   });
                 },
