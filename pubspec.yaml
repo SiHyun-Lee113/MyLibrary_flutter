@@ -52,6 +52,10 @@ dependencies:
   fluttertoast: ^8.2.2
   # 카메라 패키지
   image_picker: ^0.8.7+5
+  dotted_border: ^2.0.0+3
+  # 네트워크 연결확인
+  connectivity: ^3.0.6
+  app_settings: ^4.2.0
 
 dev_dependencies:
   flutter_test:

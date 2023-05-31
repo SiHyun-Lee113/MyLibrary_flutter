@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:library_flutter/myLibrary/SystemManagement/Permission_Denied_Dialog.dart';
 import 'package:library_flutter/myLibrary/SystemManagement/getPermission.dart'
     as getPermission;
 import 'package:permission_handler/permission_handler.dart';
+import 'package:library_flutter/myLibrary/SystemManagement/CheckNetworkConnectivity.dart' as CN;
 
 class PermissionPage extends StatefulWidget {
   @override
@@ -15,9 +17,13 @@ class PermissionPage extends StatefulWidget {
 class _PermissionPageState extends State<PermissionPage> {
   @override
   void initState() {
-    super.initState();
-
+    initPlatformState();
     getPermission.getPermission_All();
+    super.initState();
+  }
+
+  Future<void> initPlatformState() async {
+    if (!mounted) return;
   }
 
   @override
@@ -72,6 +78,22 @@ class _PermissionPageState extends State<PermissionPage> {
                     }
                   },
                   child: Text('알람 권한')),
+              ElevatedButton(
+                  onPressed: () async {
+                    var checkNetwork = CN.checkNetwork();
+                    if (await checkNetwork) {
+                      print('네트워크 연결됨');
+                    } else {
+                      print('네트워크 연결 안됨');
+                    }
+                  },
+                  child: Text('네트워크 연결 확인')),
+
+              ElevatedButton(
+                  onPressed: () {
+                    AppSettings.openAppSettings();
+                  },
+                  child: Text('앱 세팅 열기'))
             ],
           ),
         ));
